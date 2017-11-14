@@ -20,6 +20,8 @@ namespace test {
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices (IServiceCollection services) {
 			services.AddMvc ();
+
+			services.AddDirectoryBrowser ();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -31,6 +33,8 @@ namespace test {
 			app.UseMvc ();
 
 			app.UseStaticFiles ();
+
+			app.UseDirectoryBrowser ();
 		}
 	}
 }
